@@ -6,3 +6,4 @@
 6, Playera Roja,300,CAballeros
 7, Calcetines,80,Caballeros
 8, Camisa Negra,200,Caballero
+, ,,
