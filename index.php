@@ -58,7 +58,7 @@
 					<div class="col-sm-6">
 						<div class="contactinfo">
 							<ul class="nav nav-pills">
-								<li><a href="#"><i class="fa fa-phone"></i> +52 618 101 1892</a></li>
+								<li><a href="#"><i class="fa fa-phone"></i> +52 618 284 4541</a></li>
 								<li><a href="#"><i class="fa fa-envelope"></i> Astridozuna@gmail.com</a></li>
 							</ul>
 						</div>
@@ -78,9 +78,9 @@
 							<a href="index.php"><img src="images/home/logo.png" alt="" /></a>
 						</div>						
 					</div>
-					<H3>SOFTWARE PUNTO DE VENTA</H3>
+					<H3>SOFTWARE PUNTO DE VENTA </H3>
 					<div class="col-sm-8">
-						Por:Astrid Cabrera
+						Por: Astrid Cabrera
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
 								<li><a href="agregarproductos.php" target="_blank"><i class="fa fa-plus"></i>Agregar</a></li>
@@ -176,8 +176,8 @@
 						<div class="panel-group category-products" id="accordian"><!--category-productsr-->
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#">Damas</a></h4>
-									<h4 class="panel-title"><a href="#">Caballeros</a></h4>
+									<h4 class="panel-title"><a href="#">DAMAS</a></h4>
+									<h4 class="panel-title"><a href="#">CABALLEROS</a></h4>
 								</div>
 							</div>
 						</div><!--/category-products-->
@@ -193,36 +193,37 @@
 					<div class="features_items"><!--features_items-->
 						<h2 class="title text-center">Catálogo de Productos</h2>
 						<?php
-						$n=4;
-						   for ($i=1; $i < $iProductos; $i++){
-						?>
+						            $n=4;
+                        for ($i=1; $i< $iProductos;$i++){   
+                        ?>
 						<div class="col-sm-4">
 							<div class="product-image-wrapper">
 								<div class="single-products">
 										<div class="productinfo text-center">
 											<?php
-											  $img = $BDProductos[$n];
+											$img = $BDProductos[$n];
+											$productoB = $BDProductos[$n+1];
+											$precioB = $BDProductos[$n+2];
 											?>
-											<img src="images/home/<?php echo $img; ?>
-											.jpg" width="210"height="180"alt="" />
-											<h2><?php echo $BDProductos[$n+2]; ?></h2>
-											<p><?php echo $BDProductos[$n+1]; ?> 1</p>
-											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Agregar al Carrito</a>
+											<img src="images/home/<?php echo $img; ?>.jpg" width="210" height="180" alt="" />
+											<h2><?php echo $productoB; ?></h2>
+											<p><?php echo $precioB; ?></p>
+											<a href="cart.php?producto=<?php echo $productoB;?>&precio=<?php echo $precioB;?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Agregar al Carrito</a>
+											<h2><?php echo $productoB; ?></h2>
+											<p><?php echo $precioB; ?></p>
 										</div>
 										<div class="product-overlay">
 											<div class="overlay-content">
-												<h2><?php echo $BDProductos[$n+1]; ?></h2>
-												<p><?php echo $BDProductos[$n+2]; ?></p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Agregar al Carrito</a>
+												<a href="cart.php?producto=<?php echo $productoB;?>&precio=<?php echo $precioB;?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Agregar al Carrito</a>
 											</div>
 										</div>
 								</div>								
 							</div>
 						</div>
 						<?php 
-              $n+=4;
-					    } 
-						?>
+						$n+=4;
+					} 
+					?>
 					</div><!--features_items-->
 					
 					
@@ -246,8 +247,7 @@
 											</div>
 										</div>
 									</div>
-								</div>
-								<div class="col-sm-4">
+									<div class="col-sm-4">
 										<div class="product-image-wrapper">
 											<div class="single-products">
 												<div class="productinfo text-center">
@@ -260,6 +260,7 @@
 											</div>
 										</div>
 									</div>
+								</div>
 								
 							</div>
 							 <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
