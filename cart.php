@@ -190,7 +190,7 @@
 							<li>Total <span>$61</span></li>
 						</ul>
 							<a class="btn btn-default update" href="">Actualizar</a>
-							<a class="btn btn-default check_out" href="Vaciarcarrito.php">Vaciar Carrito</a>
+							<a class="btn btn-default check_out" href="Vaciarcarrito.php" target="_blank">Vaciar Carrito</a>
 					</div>
 				</div>
 			</div>
